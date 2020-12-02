@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./offers.xsl"?>
+<offers>
+
+<product orderId = "1">
+	<productDetails>T-shirt</productDetails>
+	<prodPrice>20$</prodPrice>
+</product>
+
+<product orderId = "2">
+	<productDetails>Wallpaper</productDetails>
+	<prodPrice>55$</prodPrice>
+</product>
+
+<product orderId = "3">
+	<productDetails>FLower-Vase</productDetails>
+	<prodPrice>10$</prodPrice>
+</product>
+
+<product orderId = "4">
+	<productDetails>camera</productDetails>
+	<prodPrice>155$</prodPrice>
+</product>
+
+
+</offers>

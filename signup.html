@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+      #header {
+        padding: 10px;
+        margin: 0;
+        background-color: red;
+      }
+      #footer {
+        padding: 10px;
+        margin: 0;
+        background-color: green;
+      }
+      a {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <marquee><h1>SHOPAZE - YOUR DAILY SHOP</h1></marquee>
+    <p></p>
+    <hr />
+    <div style="text-align: center" id="header">
+      <a href="home.html">Home</a><span> | </span>
+      <a href="account.html">Account</a><span> | </span>
+      <a href="categories.html">Categories</a><span> | </span>
+      <a href="orders.html">Orders</a><span> | </span>
+      <a href="profile.html">Profile</a><span> | </span>
+      <a href="login.html">Login</a><span> | </span>
+      <a href="signup.html">SignUp</a>
+    </div>
+    <hr /> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="">Shopaze</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="account.html">Account</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="categories.html">Categories</a>
+          </li><li class="nav-item active">
+            <a class="nav-link" href="orders.html">Orders</a>
+          </li><li class="nav-item active">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li><li class="nav-item active">
+            <a class="nav-link" href="login.html">Login</a>
+          </li><li class="nav-item active">
+            <a class="nav-link" href="signup.html">SignUp</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search Product" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <h2 style="text-align: center">Signup Page</h2>
+    <div class="container">
+      <form name="form" id="form" action="/shopaze_wp/signup.php" method="POST">
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="fname">First name</label>
+            <input type="text" class="form-control" name="fname" id="fname" placeholder="First name" value="">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="lname">Last name</label>
+            <input type="text" class="form-control" id="lname" name="lname" placeholder="Last name" value="">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="username">Username</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+              </div>
+              <input type="text" class="form-control" id="username" name="username" placeholder="Username" aria-describedby="inputGroupPrepend2">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="City">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" name="state" placeholder="State">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+          </div>
+
+          <label>Gender  :  </label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male" >
+            <label class="form-check-label" for="gender">
+              male
+            </label>
+          </div><br/>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female" >
+            <label class="form-check-label" for="gender">
+              Female
+            </label>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Signup</button>
+      </form>
+    </div>
+
+    <hr />
+    <div class="footer" style="text-align: center" id="footer">
+      <p><b>© Copyright 2020, www.shopaze.com</b></p>
+    </div>
+
+    <script>
+      
+      const fname = document.getElementById('fname');
+      const lname = document.getElementById('lname');
+      const username = document.getElementById('username');
+      const city = document.getElementById('city');
+      const state = document.getElementById('state');
+      const password = document.getElementById('password');
+      const gender = document.form.gender.value;
+      const form = document.getElementById('form');
+
+      form.addEventListener('submit', e => {
+        if(fname.value == null || fname.value == ""){
+          alert('Please enter First Name');
+        }
+        else if(lname.value == null || lname.value == ""){
+          alert('Please enter Last Name');
+        }
+        else if(username.value == null || username.value == ""){
+          alert('Please enter User Name');
+        }
+        else if(city.value == null || city.value == ""){
+          alert('Please enter city name');
+        }
+        else if(state.value == null || state.value == ""){
+          alert('Please enter state');
+        }  
+        else if(password.value.length <= 6){
+          alert('Password should be of minimum 6 characters');
+        }
+        if(document.getElementById('male').checked == false && document.getElementById('female').checked == false){
+          alert('Please select gender');
+        }
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

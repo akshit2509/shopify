@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Form</title>
+        <style>
+            table{
+                background:skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align :center">Product Details Form</h1>
+        <form name="demo" action="registration.jsp" method="post">
+            <table align="center">
+                <tbody>
+                    <tr>
+                        <td>Product Name :</td>
+                        <td><input type="text" name="stuname"></td>
+                    </tr>
+                    <tr>
+                        <td>Contact Number :</td>
+                        <td><input type="text" name="conno"></td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td><input type="text" name="city"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender :</td>
+                        <td><input type="radio" name="g1" value="Male">MALE</td></tr>
+                    <tr><td></td><td><input type="radio" name="g1" value="Female">FEMALE</td></tr>
+                    <tr> <td></td><td><input type="radio" name="g1" value="Other">OTHER</td></tr>
+                   
+                    <tr>
+                        <td>Date of birth :</td>
+                        <td><input type="text" name="dob" value="DD/MM/YYYY"></td>
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                    <tr>
+                        <td>Help needed for :</td>
+                        <td><textarea rows="6" cols="30" name="help">
+                           
+                            </textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="reset" value="Clear" id="clear">
+                            <input type="submit" value="Submit" id="submit"></td>
+                    </tr>
+                   
+                </tbody>
+               
+            </table>
+           
+        </form>
+    </body>
+</html>

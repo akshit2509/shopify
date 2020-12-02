@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title> </title>
+		
+	</head>
+	<style>
+		.view_btn{
+			background-color: mediumseagreen;
+			color: white;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			font-size: medium;
+			text-align: center;
+			margin-left: 46%;
+			border-radius: 2%;
+			border: white;
+			padding: 15px;
+		}
+	</style>
+	<script>
+		function loadOfferXML() {
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			  displayOffersTable(this);
+			}
+		  };
+		  xhttp.open("GET", "offers.xml", true);
+		  xhttp.send();
+		}
+		function displayOffersTable(xml) {
+		  var i;
+		  var xmlDoc = xml.responseXML;
+		  var table="<tr><th>Product</th>"+
+                    "<th>price</th>";
+
+		  var x = xmlDoc.getElementsByTagName("product");
+		  for (i = 0; i <x.length; i++) { 
+			table += "<tr><td>" +
+			x[i].getElementsByTagName("productDetails")[0].childNodes[0].nodeValue +
+			"</td><td>" +
+			x[i].getElementsByTagName("prodPrice")[0].childNodes[0].nodeValue +
+			"</td><td>";
+		  }
+		  document.getElementById("offer-table").innerHTML = table;
+		}
+		</script>
+		
+    
+		<h1 style="text-align: center;">Premium deals</h1>
+		<button class="view_btn" type="submit" value="button" onclick="loadOfferXML()" >
+			View Deals
+			<i class="material-icons" style="font-size:large; padding-right: 3px;padding-left: 5px;">
+			  
+			</i>
+        </button>
+        
+			<table id="offer-table" class="offer-table"></table>
+			<footer >
+				<!-- <p style="text-align: center;">
+				  CAKE STORE
+				</p> -->
+				
+			</footer>
+</script></body>
+</html>

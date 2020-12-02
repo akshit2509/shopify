@@ -1,0 +1,32 @@
+<?xml version = "1.0"?> 
+<?xml-stylesheet type = "text/xsl" href="product.xsl"?> 
+<class>
+<product orderId = "1">
+	<productDetails>T-shirt</productDetails>
+	<prodPrice>20$</prodPrice>
+	<payMethod>credit card</payMethod>
+	<status>Delivered</status>
+</product>
+
+<product orderId = "2">
+	<productDetails>Wallpaper</productDetails>
+	<prodPrice>55$</prodPrice>
+	<payMethod>COD</payMethod>
+	<status>Delivered</status>
+</product>
+
+<product orderId = "3">
+	<productDetails>FLower-Vase</productDetails>
+	<prodPrice>10$</prodPrice>
+	<payMethod>credit card</payMethod>
+	<status>In-transit</status>
+</product>
+
+<product orderId = "4">
+	<productDetails>camera</productDetails>
+	<prodPrice>155$</prodPrice>
+	<payMethod>Debit Card</payMethod>
+	<status>delivered</status>
+</product>
+
+</class>
